@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<title>Rainbow | Apply colors to a list of DOM objects | Plugin jQuery | www.consulenza-web.com</title>
+		<meta name="description" content="jQuery Rainbow Plugin: apply a list of colors to a list of DOM objects!" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		
+		
+		
+		
+		<!-- Page Style, don't care about this code -->
+		<style type="text/css">
+		html { text-align:center; background: #fff; font-family: "Trebuchet MS"; font-size:1em; }
+		body { display:block; width:95%; margin:2em auto; text-align:left; }
+		a { color:#0063c5}
+		h1,h2 { margin:0; font-weight:normal; }
+		h2 { font-size:1em; margin-bottom:2em; }
+		.article { border-top:1px solid #444;border-bottom:1px solid #444;margin-bottom:2em;font-size:0.85em;line-height: 1.3em; color:#333; padding:0;}
+		.example { margin:2em 0; background:#f6f6f6; border-radius: 20px; padding:1em; }
+		.example p { font-size:0.9em; text-shadow: 0 1px 0 #fff; color:#333; }
+		.controls { text-align: center;margin-bottom:2em;}
+		.controls input { font-size:1em; padding:0.5em; }
+		.credits { margin-top:3em;text-align: center;font-size:0.8em; background: #ddd; text-shadow: 0 1px 0 #fff; padding:0.2em; }
+		pre { background: #ddd; padding:1em; text-shadow: 0 1px 0 #fff; border-radius: 5px; border:1px solid #fff; }
+		
+		</style>
+		
+		
+		
+		
+		
+		
+		<!-- Rainbow Plugin -->
+		<!-- This is all you need to copy in your page! -->
+		<script src="jquery.rainbow.js"></script>
+		
+		
+		
+		<!-- Functional Script: this activate/deactivate MediaTable -->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			
+			
+			
+			// Example 01
+			$('a[href=#ex01]').click(function( e ){
+				
+				e.preventDefault();
+				
+				$('#ex01 li').rainbow();
+			});
+			
+			
+			// Example 02
+			$('a[href=#ex02]').click(function( e ){
+				
+				e.preventDefault();
+				
+				$('#ex02 li').rainbow('color');
+			});
+			
+			
+			// Example 03
+			$('a[href=#ex03]').click(function( e ){
+				
+				e.preventDefault();
+				
+				$('#ex03 li').rainbow({
+					colors: [ '#ded4ff', '#b2aacc', '#8f88a3' ]
+				});
+				
+				$('#ex03 p:last').fadeIn(1000);
+			})
+			
+			
+		});
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		
+		<h1>Rainbow jQuery Plguin</h1>
+		<h2>Apply colors to a list of DOM objects!</h2>
+		
+		<div class="article">
+			
+			<h3>What does this plugin do?</h3>
+			
+			<p>
+				<strong>Rainbow</strong> walk through a list of DOM objects identified by a simple x-path: <em>$('p')</em>.<br />
+				Each item will be applied with a color fetched from a list (configurable) so you'll obtain a list of different color items.
+			</p>
+			
+			<h3>How do I use this demo?</h3>
+			
+			<p>Just scroll down to examples and click the link to activate them!</p>
+			
+		</div>
+		
+		
+		<div id="ex01" class="example">
+			<h3>Example 01</h3>
+			
+			<p><a href="#ex01">Click here to apply!</a></p>
+			
+<pre>
+$('#ex01 li').rainbow();
+</pre>
+			
+			<ul>
+				<li>each</li>
+				<li>line</li>
+				<li>of this</li>
+				<li>list</li>
+				<li>is</li>
+				<li>colored</li>
+				<li>by</li>
+				<li>my</li>
+				<li>rainbow</li>
+				<li>plugin</li>
+				<li>with</li>
+				<li>a</li>
+				<li>single</li>
+				<li>line</li>
+				<li>of</li>
+				<li>code</li>
+			</ul>
+
+		</div>
+		
+		
+		
+		<div id="ex02" class="example">
+			
+			<h3>Example 02 - set target property</h3>
+			
+			<p>
+				By default <strong>rainbow</strong> apply to <em>background</em> property. So let me change this behavior to set the <em>font color</em>:
+			</p>
+			
+			<p><a href="#ex02">Click here to apply!</a></p>
+
+<pre>
+$('#ex02 li').rainbow('color');
+</pre>
+
+			<ul>
+				<li>each</li>
+				<li>line</li>
+				<li>of this</li>
+				<li>list</li>
+				<li>is</li>
+				<li>colored</li>
+				<li>by</li>
+				<li>my</li>
+				<li>rainbow</li>
+				<li>plugin</li>
+				<li>with</li>
+				<li>a</li>
+				<li>single</li>
+				<li>line</li>
+				<li>of</li>
+				<li>code</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+		<div id="ex03" class="example">
+			
+			<h3>Example 03 - customize colors list</h3>
+			
+			<p>
+				<strong>Rainbow</strong> contains a beautifull list of colors but you can set your own!
+			</p>
+			
+			<p><a href="#ex03">Click here to apply!</a></p>
+
+<pre>
+$('#ex03 li').rainbow({
+  colors: [ '#ded4ff', '#b2aacc', '#8f88a3' ]
+});
+</pre>
+
+			<ul>
+				<li>each</li>
+				<li>line</li>
+				<li>of this</li>
+				<li>list</li>
+				<li>is</li>
+				<li>colored</li>
+				<li>by</li>
+				<li>my</li>
+				<li>rainbow</li>
+				<li>plugin</li>
+				<li>with</li>
+				<li>a</li>
+				<li>single</li>
+				<li>line</li>
+				<li>of</li>
+				<li>code</li>
+			</ul>
+			
+			<p style="display:none">Yes, you can use <strong>rainbow</strong> to set even/odd rows color in a table!</p>
+			
+		</div>
+				
+				
+				
+		
+		<div class="credits" style="margin-top:500px;">
+			<p>Created by <a href="http://consulenza-web.com" title="Marco Pegoraro Personal Blog" target="_blank">Marco Pegoraro</a> | Fork on <a href="https://github.com/thepeg/ScrollStiky" target="_blank">GitHub</a></p>
+		</div>
+		
+				
+	</body>
+</html>
