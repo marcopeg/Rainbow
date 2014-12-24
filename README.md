@@ -1,6 +1,6 @@
 
 Live Demo Here:  
-http://marcopeg.github.io/rainbow
+http://marcopeg.github.io/Rainbow
 
 
 
